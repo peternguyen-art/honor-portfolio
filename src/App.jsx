@@ -3,6 +3,9 @@ import {Hero} from "@/sections/Hero.jsx";
 import {About} from "@/sections/About.jsx";
 import {Experience} from "@/sections/Experience.jsx";
 import {Contact} from "@/sections/Contact.jsx";
+import { YearInReview } from "./sections/YearInReview";
+import { Involvement } from "./sections/Involvement";
+import { Gateway } from "./sections/Gateway";
 
 function App() {
 
@@ -13,6 +16,9 @@ function App() {
         <Hero/>
         <About/>
         <Experience/>
+        <Involvement/>
+        <YearInReview/>
+        <Gateway/>
         <Contact/>
 
       </main>
