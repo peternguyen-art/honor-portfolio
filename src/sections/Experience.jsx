@@ -1,43 +1,43 @@
-import React from 'react';
+import React from "react";
 import { ExternalLink, Terminal, Cpu, Layout } from "lucide-react";
 
 export const Experience = () => {
   return (
-    <section id="experience" className="py-32 relative overflow-hidden bg-background">
+    <section
+      id="experience"
+      className="py-32 relative overflow-hidden bg-background"
+    >
       {/* Background Accent */}
       <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-primary/5 rounded-full blur-[100px] animate-slow-drift" />
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="grid lg:grid-cols-12 gap-12 items-center">
-          
           {/* LEFT COLUMN: Media Box */}
           <div className="lg:col-span-6 animate-fade-in">
-            <div className="relative group">
-              {/* Animated Glow behind the box */}
-              <div className="absolute -inset-1 bg-gradient-to-r from-primary/30 to-gold/20 rounded-[3rem] blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
-              
-              <div className="relative glass-strong p-3 rounded-[3rem] glow-border overflow-hidden">
-                {/* Main Media Image */}
-                <div className="relative aspect-video rounded-[2rem] overflow-hidden">
-                  <img 
-                    src="profile.jpeg" // Replace with a project screenshot or media
-                    alt="Experience Highlight" 
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  />
-                  
-                </div>
+            {/* Two-column layout for side-by-side vertical images */}
+            <div className="grid grid-cols-2 gap-4 relative group">
+              {/* Shared Backing Glow (grows under both images when hovering anywhere in the zone) */}
+              <div className="absolute -inset-2 bg-gradient-to-r from-primary/20 to-gold/10 rounded-[3.5rem] blur-xl opacity-25 group-hover:opacity-60 transition duration-1000 pointer-events-none" />
 
-                {/* Tech Stack Pills */}
-                <div className="flex gap-3 p-4 overflow-hidden">
-                  {[
-                    { icon: <Layout className="w-3 h-3" />, label: "React" },
-                    { icon: <Cpu className="w-3 h-3" />, label: "Unreal Engine" },
-                    { icon: <Terminal className="w-3 h-3" />, label: "C++" }
-                  ].map((tech, i) => (
-                    <span key={i} className="flex items-center gap-2 px-3 py-1.5 glass rounded-full text-[10px] font-bold uppercase tracking-widest text-muted-foreground">
-                      {tech.icon} {tech.label}
-                    </span>
-                  ))}
+              {/* LEFT VERTICAL IMAGE CONTAINER */}
+              <div className="relative glass-strong p-2 rounded-[2.5rem] glow-border transition-all duration-500 hover:-translate-y-3 hover:scale-[1.02] cursor-pointer">
+                <div className="relative aspect-[3/4] rounded-[2rem] overflow-hidden">
+                  <img
+                    src="bcp_polaroid.jpg"
+                    alt="Experience Highlight Left"
+                    className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
+                  />
+                </div>
+              </div>
+
+              {/* RIGHT VERTICAL IMAGE CONTAINER */}
+              <div className="relative glass-strong p-2 rounded-[2.5rem] glow-border transition-all duration-500 hover:-translate-y-3 hover:scale-[1.02] cursor-pointer delay-75">
+                <div className="relative aspect-[3/4] rounded-[2rem] overflow-hidden">
+                  <img
+                    src="bcp_cranberries.jpg"
+                    alt="Experience Highlight Right"
+                    className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
+                  />
                 </div>
               </div>
             </div>
@@ -46,31 +46,61 @@ export const Experience = () => {
           {/* RIGHT COLUMN: Experience Text (200 words) */}
           <div className="lg:col-span-6 space-y-6 animate-fade-in animation-delay-200">
             <div className="space-y-2">
-              <h2 className="text-primary font-bold tracking-[0.2em] uppercase text-xs">Featured Experience</h2>
+              <h2 className="text-primary font-bold tracking-[0.2em] uppercase text-xs">
+                Featured Experience
+              </h2>
               <h1 className="text-5xl font-bold leading-tight">
-                Something <br /> 
-                <span className="text-primary glow-text font-serif italic font-normal">Meaningful</span>
+                Bearcat Pantry <br /> and Resources Center <br />
+                <span className="text-primary glow-text font-serif italic font-normal">
+                  Meaningful Service.
+                </span>
               </h1>
             </div>
 
             <div className="glass p-8 md:p-10 rounded-[2.5rem] border-l-4 border-primary">
               <div className="prose prose-invert text-muted-foreground leading-relaxed text-md space-y-6">
                 <p>
-                  Cras lectus est, semper eget semper at, pretium nec libero. Cras ornare sit amet elit non suscipit. Curabitur molestie lectus vel neque tincidunt, sed malesuada urna gravida. Phasellus metus libero, fermentum eget mi nec, commodo luctus velit. Praesent in ex blandit, condimentum libero non, lobortis ex. Aliquam rhoncus egestas mollis. Donec nulla ex, ullamcorper auctor convallis sit amet, euismod sit amet felis. Ut ullamcorper quis ante eu feugiat. Nam id faucibus libero. Proin tempor est augue. Duis at vulputate nunc, varius ultricies eros. Nam fermentum eu dolor in accumsan.
+                  My experience as a staff member at the Bearcat Pantry and
+                  Resource Center (BCP) at the University of Cincinnati has been
+                  one of the most meaningful parts of my college journey. The
+                  BCP provides food assistance, essential household items, and
+                  connections to additional resources for students, staff, and
+                  families experiencing financial hardship or food insecurity.
+                  As a staff member, I supported daily pantry operations,
+                  assisted visitors, restocked inventory, helped manage
+                  resources, and welcomed volunteers and community partners.
                 </p>
                 <p>
-                  Aenean et nulla mollis, pulvinar felis a, commodo mi. Mauris egestas nisl nisl, ac laoreet mauris blandit ut. Donec est nisl, interdum vitae accumsan in, laoreet quis velit. Nullam vitae porttitor lorem. Proin et erat elit. Duis dui quam, laoreet vel elit vel, fermentum auctor libero. Nam tincidunt convallis molestie. Morbi gravida convallis suscipit. Nunc egestas urna et metus convallis egestas. Nunc faucibus volutpat lorem, a maximus mauris tempus gravida. Cras mollis purus lacus, quis pulvinar justo auctor sit amet. Proin quam elit, mollis nec nisi hendrerit, mollis sollicitudin risus. Donec vestibulum cursus purus, eu iaculis dolor pharetra eget. Nulla in ante elementum lorem malesuada semper ut eget arcu
+                  As an international student, I personally understood the
+                  importance of accessible support systems. Before joining the
+                  team, I had benefited from the pantry's services during my
+                  transition to UC. Working at the BCP allowed me to give back
+                  to a community that had supported me while also helping others
+                  facing similar challenges. Through interactions with visitors
+                  from diverse backgrounds, I learned the importance of empathy,
+                  inclusion, and creating spaces where people feel respected and
+                  valued.
+                </p>
+                <p>
+                  This experience reshaped my definition of a Global Citizen
+                  Scholar. I now view global citizenship not only as
+                  understanding diverse perspectives but also as taking
+                  meaningful action to support and uplift others within my
+                  community. The BCP showed me that creating positive change
+                  begins with recognizing human needs and responding with
+                  compassion. This perspective continues to influence both my
+                  personal values and my goal of developing technology that
+                  improves people's lives.
                 </p>
               </div>
 
               {/* Status footer for consistency */}
               <div className="mt-6 flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest opacity-50">
                 <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-                Pre-Approved Experience
+                Self-Designed Experience
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </section>
